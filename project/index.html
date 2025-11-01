@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillCraft Task 01 – Responsive Landing Page</title>
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* HEADER NAVIGATION */
+    header {
+      background: #f9f6f2;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header.scrolled {
+      background-color: #f1efec;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #3a3a3a;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: #ece8e2;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 120px 20px 80px;
+      background: #fdfaf7;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* FOUR-BOX SECTION */
+    .four-box-section {
+      background-color: #fdfaf7;
+      padding: 60px 20px;
+    }
+
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .info-box {
+      flex: 1 1 calc(50% - 20px); /* 2 in a row layout */
+      background-color: #fff;
+      border: 1px solid #e0dedb;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .info-box h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .info-box p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f3f1ee;
+      padding: 30px 20px 15px;
+      font-size: 14px;
+      color: #555;
+      margin-top: 40px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .footer-links ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0;
+      margin: 0 0 10px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+      .info-box {
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .footer-links ul {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header id="navbar">
+    <div class="nav-container">
+      <div class="logo">SkillCraft</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Responsive Landing Page with Interactive Navigation</h1>
+    <p>This responsive layout was developed for SkillCraft Task 01 to demonstrate front-end best practices.</p>
+  </section>
+
+  <!-- 4 INFO BOXES -->
+  <section class="four-box-section">
+    <div class="box-container">
+
+      <div class="info-box">
+        <h3>Task Overview</h3>
+        <p>This project was created as part of <strong>SkillCraft Task 01</strong>, focusing on building a responsive landing page with interactive navigation using HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Design Approach</h3>
+        <p>The design uses light neutral tones, consistent padding, and clear typography to maintain a clean and professional layout that aligns with real-world front-end standards.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Responsive Layout</h3>
+        <p>Built using CSS Flexbox and media queries, this page adapts smoothly across devices, ensuring readability and usability on phones, tablets, and desktops.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Interactive Features</h3>
+        <p>The navigation bar remains fixed at the top and changes color on scroll. Navigation links respond on hover, enhancing the overall user experience.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Chaithra M.G. | SkillCraft Task 01
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT for scroll effect -->
+  <script>
+    const header = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
